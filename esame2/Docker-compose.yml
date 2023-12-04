@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  mynodeapp:
+    build:
+      context: .
+      args:
+        PORT: 3000
+    environment:
+      - NODE_ENV_PORT=3000
+    ports:
+      - "${NODE_ENV_PORT}:${NODE_ENV_PORT}"
